@@ -28,7 +28,7 @@ function favoriteFoods(object) {
             object[key].forEach(value => {  // calls a function for each element in array, does not perform on empty arrays. credit W3 schools
                 if (typeof value === 'object') {
                     console.log("-----Inner IF-----");
-                    for (let secondary in value) { // I just used secondary as the new value called. In my head it works better than another letter other than I or the parameter name
+                    for (let secondary in value) { // I just used secondary as the new value called. In my head it works better than another letter other than i or the parameter name
                         console.log(value[secondary]);
                     }
                     console.log("-----Inner If Done-----");
@@ -122,3 +122,48 @@ const driverStandings = async () => {
 
 driverStandings()
 // Not to myself. Forgot this for about five minutes and didn't know why it wasn't logging. Now I know...
+
+
+
+
+/*  CODEWARS
+
+Both Kata's are one's that I have not trained on before
+
+KATA
+Sentence Smash
+Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+Example
+['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+
+
+SOLUTION : originally treid something with adding to an empty string, but then remembered .join()
+
+function smash (words) {
+   
+  return words.join(' ') // .join() concatenates the list for us. We just add the space
+                         // It only adds the space between each item and not around each item.
+};
+
+
+KATA
+
+Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+Example:
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+None of the arrays will be empty, so you don't have to worry about that!
+
+
+SOLUTION
+
+function removeEveryOther(arr){
+  var output = [];
+  for (var i=0; i<arr.length; i+=2){ // learned this on day one, just the setup before was used to splice with 'let' instead of 'var'
+   output.push(arr[i]); // appending output with the ele at idx i
+  }
+  return output;
+}
+*/
